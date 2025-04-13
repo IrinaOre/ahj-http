@@ -1,4 +1,4 @@
-const baseUrl = "https://ahj-http-9iey.onrender.com/";
+const baseUrl = "https://ahj-http-9iey.onrender.com";
 
 //create user
 const create = async (user) => {
@@ -17,11 +17,7 @@ const create = async (user) => {
 
 //
 const get = async (userId) => {
-  const response = await fetch(`${baseUrl}/?method=getUser&userId=${userId}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(user),
-  });
+  const response = await fetch(`${baseUrl}/?method=getUser&userId=${userId}`);
 
   if (response.status !== 200) {
     throw new Error(`status ${response.status}`);
