@@ -1,4 +1,4 @@
-const baseUrl = "https://ahj-http-9iey.onrender.com";
+const baseUrl = "https://ahj-http-9iey.onrender.com/";
 
 //create user
 const create = async (user) => {
