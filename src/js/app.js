@@ -1,11 +1,11 @@
-// TODO: write code here
+import { UserService } from "./UserService.js";
 
-// comment this to pass build
-const unusedVariable = "variable";
-
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
-
-console.log("app.js included");
+const init = async () => {
+  const user = await UserService.create({
+    name: "User" + Math.ceil(Math.random() * 1000),
+    status: "active",
+  });
+  await UserService.get(user.id);
+  await UserService.getAll();
+};
+init();
